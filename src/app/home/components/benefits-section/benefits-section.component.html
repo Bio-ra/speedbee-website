@@ -1,0 +1,29 @@
+<section id="korzysci" class="benefits-section">
+  <div class="container">
+    <div class="grid-container">
+      <div class="image-container">
+        <img src="/images/apiary.jpg" alt="Nasza pasieka na polskiej wsi" class="rounded-image shadow">
+      </div>
+      
+      <div class="content">
+        <span class="badge">Dlaczego nasz miód?</span>
+        <h2 class="section-title">Korzyści Naturalnego Miodu</h2>
+        <p class="section-description">
+          Nasz miód to nie tylko słodycz - to prawdziwy eliksir zdrowia prosto z natury
+        </p>
+        
+        <div class="benefits-grid">
+          <div *ngFor="let benefit of benefits" class="benefit-card">
+            <div class="benefit-icon">
+              {{ benefit.icon }}
+            </div>
+            <div>
+              <h3 class="benefit-title">{{ benefit.title }}</h3>
+              <p class="benefit-description">{{ benefit.description }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

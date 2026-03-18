@@ -1,0 +1,65 @@
+<main class="products-page">
+  <div class="container">
+    <div class="page-header">
+      <span class="badge">Nasza oferta</span>
+      <h1 class="page-title">Wszystkie Produkty</h1>
+      <p class="page-description">
+        Wybierz spośród naszych naturalnych miodów. Każda odmiana ma swój unikalny smak i właściwości zdrowotne.
+      </p>
+    </div>
+
+    <div *ngIf="loading" class="loading-state">
+      <p>Ładowanie produktów...</p>
+    </div>
+
+    <ng-container *ngIf="!loading">
+      <div class="filters">
+        <button 
+          *ngFor="let filter of filters"
+          (click)="setFilter(filter)"
+          [class.active]="activeFilter === filter"
+          class="filter-btn"
+        >
+          {{ filter }}
+        </button>
+      </div>
+
+      <div class="products-grid">
+        <a 
+          *ngFor="let product of filteredProducts" 
+          [routerLink]="['/products', product.id]"
+          class="product-card"
+        >
+          <div class="product-image-wrapper">
+            <img [src]="product.image" [alt]="product.name" class="product-image">
+            <span *ngIf="product.tag" class="product-tag">{{ product.tag }}</span>
+            <div class="product-actions">
+              <button 
+                type="button"
+                (click)="addToCart($event, product)" 
+                class="action-btn" 
+                title="Dodaj do koszyka"
+              >
+                ➕
+              </button>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">{{ product.name }}</h3>
+            <p class="product-description">{{ product.description }}</p>
+            <div class="product-footer">
+              <div class="price-info">
+                <span class="price">{{ product.price }} zł</span>
+                <span class="weight">/ {{ product.weight }}</span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div *ngIf="filteredProducts.length === 0" class="empty-state">
+        <p>Brak produktów do wyświetlenia</p>
+      </div>
+    </ng-container>
+  </div>
+</main>

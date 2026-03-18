@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "Miód Lipowy",
+    "description": "Delikatny, jasnozłoty miód o kwiatowym aromacie. Idealny do herbaty i deserów. Znany ze swoich właściwości łagodzących gardło.",
+    "longDescription": "Miód lipowy to jeden z najbardziej cenionych miodów w Polsce. Pozyskiwany z kwiatów lipy drobnolistnej i szerokolistnej, charakteryzuje się delikatnym, słodkim smakiem z lekko miętowym posmakiem. Jest jasny, o złocistej barwie, która z czasem może przybierać kremową konsystencję. Miód lipowy jest znany ze swoich właściwości wspomagających układ oddechowy i łagodzących gardło.",
+    "price": 45,
+    "weight": "500g",
+    "tag": "Bestseller",
+    "image": "/images/honey-linden.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Miód Wielokwiatowy",
+    "description": "Bogaty smak dzikich łąk i polnych kwiatów. Uniwersalny miód na co dzień.",
+    "longDescription": "Miód wielokwiatowy to mieszanka nektarów zebranych z różnorodnych kwiatów łąkowych i polnych. Jego smak jest bogaty i złożony, różniący się nieznacznie w zależności od sezonu i miejsca zbioru. Ten uniwersalny miód doskonale nadaje się do codziennego użytku - do słodzenia herbaty, kawy, pieczenia ciast czy jako dodatek do jogurtów i owsianki.",
+    "price": 42,
+    "weight": "500g",
+    "tag": "Nowość",
+    "image": "/images/honey-wildflower.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Miód Gryczany",
+    "description": "Ciemny, intensywny miód o charakterystycznym smaku. Bogaty w żelazo i antyoksydanty.",
+    "longDescription": "Miód gryczany to jeden z najciemniejszych i najbardziej aromatycznych miodów. Charakteryzuje się intensywnym, lekko gorzkim smakiem i ciemnobrązową barwą. Jest bogaty w żelazo, antyoksydanty i flawonoidy. Szczególnie polecany osobom z niedokrwistością oraz jako naturalny sposób na wzmocnienie odporności.",
+    "price": 48,
+    "weight": "500g",
+    "tag": null,
+    "image": "/images/honey-buckwheat.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Miód Akacjowy",
+    "description": "Bardzo jasny, łagodny i długo płynny miód. Idealny dla dzieci.",
+    "longDescription": "Miód akacjowy to prawdziwy rarytas wśród miodów. Jest bardzo jasny, niemal przezroczysty, o delikatnym, słodkim smaku bez goryczki. Jego wyjątkową cechą jest to, że bardzo długo pozostaje płynny i nie krystalizuje się tak szybko jak inne miody. Dzięki łagodnemu smakowi jest idealny dla dzieci i osób preferujących delikatniejsze smaki.",
+    "price": 55,
+    "weight": "500g",
+    "tag": "Premium",
+    "image": "/images/honey-acacia.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Miód Spadziowy",
+    "description": "Ciemny miód leśny, bogaty w minerały. Z lasów iglastych.",
+    "longDescription": "Miód spadziowy powstaje z nektaru wydzielanego przez mszyce żerujące na drzewach iglastych. Ma ciemną, niemal czarną barwę i intensywny, żywiczny smak. Jest wyjątkowo bogaty w minerały, enzymy i substancje antybakteryjne. Polecany szczególnie w okresie jesienno-zimowym jako naturalne wsparcie odporności.",
+    "price": 52,
+    "weight": "500g",
+    "tag": null,
+    "image": "/images/honey-honeydew.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Zestaw Degustacyjny",
+    "description": "4 słoiczki różnych odmian miodu. Idealny na prezent.",
+    "longDescription": "Zestaw degustacyjny to idealny prezent dla miłośników miodu lub osób chcących odkryć różnorodność smaków. Zawiera 4 słoiczki po 125g każdy: miód lipowy, wielokwiatowy, gryczany i akacjowy. Elegancko zapakowany, gotowy do wręczenia jako prezent. Świetny sposób na poznanie różnych odmian miodu i wybranie swojego ulubionego.",
+    "price": 85,
+    "weight": "4x125g",
+    "tag": "Prezent",
+    "image": "/images/honey-set.jpg"
+  }
+]

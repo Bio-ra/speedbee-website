@@ -1,0 +1,42 @@
+<section class="testimonials-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="badge">Opinie klientów</span>
+      <h2 class="section-title">Nasi Klienci Nas Kochają</h2>
+      <p class="section-description">
+        Dołącz do ponad 5000 zadowolonych klientów, którzy wybrali nasz naturalny miód
+      </p>
+    </div>
+
+    <div class="testimonials-grid">
+      <div *ngFor="let testimonial of testimonials" class="testimonial-card">
+        <div class="stars">
+          <span *ngFor="let i of [1,2,3,4,5]" class="star">⭐</span>
+        </div>
+        <p class="testimonial-text">
+          "{{ testimonial.text }}"
+        </p>
+        <div class="testimonial-author">
+          <div class="author-avatar">
+            {{ generateInitials(testimonial.name) }}
+          </div>
+          <div>
+            <p class="author-name">{{ testimonial.name }}</p>
+            <p class="author-location">{{ testimonial.location }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="customers-info">
+      <div class="customers-avatars">
+        <span *ngFor="let letter of ['A', 'B', 'C', 'D']" class="avatar-badge">
+          {{ letter }}
+        </span>
+      </div>
+      <p class="customers-text">
+        <span class="customers-bold">5000+</span> zadowolonych klientów
+      </p>
+    </div>
+  </div>
+</section>

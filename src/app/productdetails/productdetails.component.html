@@ -1,0 +1,89 @@
+<main class="detail-page" *ngIf="product">
+  <div class="container">
+    <a routerLink="/products" class="back-link">
+      ← Powrót do produktów
+    </a>
+
+    <div class="detail-grid">
+      <div class="product-image-section">
+        <div class="image-container">
+          <img [src]="product.image" [alt]="product.name" class="product-image">
+          <span *ngIf="product.tag" class="product-tag">{{ product.tag }}</span>
+        </div>
+      </div>
+
+      <div class="product-info-section">
+        <h1 class="product-name">{{ product.name }}</h1>
+        <p class="product-weight">{{ product.weight }}</p>
+        
+        <div class="price-section">
+          <span class="product-price">{{ product.price }} zł</span>
+        </div>
+
+        <p class="product-long-description">
+          {{ product.longDescription }}
+        </p>
+
+        <div class="quantity-section">
+          <div class="quantity-control">
+            <button 
+              (click)="decreaseQty()" 
+              class="qty-btn"
+              aria-label="Zmniejsz ilość"
+            >
+              −
+            </button>
+            <span class="qty-display">{{ quantity }}</span>
+            <button 
+              (click)="increaseQty()" 
+              class="qty-btn"
+              aria-label="Zwiększ ilość"
+            >
+              +
+            </button>
+          </div>
+          <button (click)="addToCart()" class="add-to-cart-btn">
+            🛒 Dodaj do koszyka - {{ product.price * quantity }} zł
+          </button>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <span class="feature-icon">🚚</span>
+            <p class="feature-title">Szybka dostawa</p>
+            <p class="feature-text">2-3 dni robocze</p>
+          </div>
+          <div class="feature-card">
+            <span class="feature-icon">✅</span>
+            <p class="feature-title">Gwarancja</p>
+            <p class="feature-text">Zwrot 14 dni</p>
+          </div>
+          <div class="feature-card">
+            <span class="feature-icon">🌿</span>
+            <p class="feature-title">100% Naturalny</p>
+            <p class="feature-text">Bez chemii</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="related-section" *ngIf="relatedProducts.length > 0">
+      <h2 class="related-title">Może Cię również zainteresować</h2>
+      <div class="related-grid">
+        <a 
+          *ngFor="let relatedProduct of relatedProducts" 
+          [routerLink]="['/products', relatedProduct.id]"
+          class="related-card"
+        >
+          <div class="related-image">
+            <img [src]="relatedProduct.image" [alt]="relatedProduct.name" class="image">
+          </div>
+          <div class="related-info">
+            <h3 class="related-name">{{ relatedProduct.name }}</h3>
+            <p class="related-price">{{ relatedProduct.price }} zł</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</main>

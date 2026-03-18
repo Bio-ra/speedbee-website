@@ -1,0 +1,61 @@
+<section id="produkty" class="products-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="badge">Nasza oferta</span>
+      <h2 class="section-title">Wybierz Swoj Miod</h2>
+      <p class="section-description">
+        Kazda odmiana ma swoj unikalny smak i wlasciwosci zdrowotne
+      </p>
+    </div>
+
+    <div class="filters">
+      <button 
+        *ngFor="let filter of filters"
+        (click)="setFilter(filter)"
+        [class.active]="activeFilter === filter"
+        class="filter-btn"
+      >
+        {{ filter }}
+      </button>
+    </div>
+
+    <div class="products-grid">
+      <a 
+        *ngFor="let product of getFilteredProducts()" 
+        [routerLink]="['/products', product.id]"
+        class="product-card"
+      >
+        <div class="product-image-wrapper">
+          <img [src]="product.image" [alt]="product.name" class="product-image">
+          <span *ngIf="product.tag" class="product-tag">{{ product.tag }}</span>
+          <div class="product-actions">
+            <button 
+              type="button"
+              class="action-btn" 
+              (click)="addToCart($event, product)" 
+              title="Dodaj do koszyka"
+            >
+              ➕
+            </button>
+            <span class="action-btn" title="Zobacz szczegoly">
+              👁️
+            </span>
+          </div>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">
+            {{ product.name }}
+          </h3>
+          <p class="product-description">{{ product.description }}</p>
+          <div class="product-footer">
+            <div class="price-info">
+              <span class="price">{{ product.price }} zł</span>
+              <span class="weight">/ {{ product.weight }}</span>
+            </div>
+            <button type="button" class="add-btn" (click)="addToCart($event, product)">🛒</button>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>

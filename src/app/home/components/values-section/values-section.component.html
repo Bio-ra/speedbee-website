@@ -1,0 +1,47 @@
+<section class="values-section">
+  <div class="container">
+    <div class="grid-container">
+      <div class="content">
+        <span class="badge">Nasze wartosci</span>
+        <h2 class="section-title">Miod Tworzony z Pasja i Szacunkiem dla Natury</h2>
+        <p class="section-description">
+          Od pokolen nasza rodzina zajmuje sie pszczelarstwem. Kazdy sloik miodu to efekt 
+          ciezkiej pracy, tradycji przekazywanej z pokolenia na pokolenie oraz glebokiego 
+          szacunku dla natury i naszych pracowitych pszczol.
+        </p>
+        <p class="section-description">
+          Nasze ule znajduja sie z dala od miast i zanieczyszczen, w otoczeniu dzikich lak, 
+          lasow i pol uprawnych bez chemii. Dzieki temu nasz miod zachowuje wszystkie 
+          naturalne wlasciwosci i niepowtarzalny smak.
+        </p>
+        
+        <div class="values-grid">
+          <div *ngFor="let value of values" class="value-card">
+            <div class="value-icon">{{ value.icon }}</div>
+            <div>
+              <p class="value-title">{{ value.title }}</p>
+              <p class="value-description">{{ value.description }}</p>
+            </div>
+          </div>
+        </div>
+
+        <a routerLink="/o-nas" class="learn-btn">
+          Poznaj nasza historie
+        </a>
+      </div>
+
+      <div class="image-wrapper">
+        <div class="image-container">
+          <img src="/images/bee-working.jpg" alt="Pszczola zbierajaca nektar z kwiatow" class="image">
+        </div>
+        <div class="cert-card hidden-mobile">
+          <div class="cert-icon">🏆</div>
+          <div>
+            <p class="cert-title">Certyfikowany</p>
+            <p class="cert-description">Produkt ekologiczny</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
