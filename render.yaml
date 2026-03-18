@@ -4,7 +4,9 @@ services:
     buildCommand: npm install && npm run build
     staticPublishPath: dist/app/browser
     routes:
-      - path: /*
+      - path: /
+        destination: /index.html
+      - path: /:path(.*)?
         destination: /index.html
     envVars:
       - key: NODE_ENV
