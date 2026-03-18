@@ -1,0 +1,96 @@
+<footer id="kontakt" class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <!-- Company Info -->
+      <div class="footer-section large">
+        <div class="footer-logo">
+          <h3>Speed<span class="bee">Bee</span></h3>
+        </div>
+        <p class="footer-description">
+          Naturalny miód prosto z rodzinnej pasieki. Od pokoleń dbamy o jakość 
+          i tradycje pszczelarstwa, oferując tylko najlepsze produkty.
+        </p>
+        <div class="newsletter">
+          <p class="newsletter-label">Zapisz się do newslettera</p>
+          <div class="newsletter-form">
+            <input 
+              type="email" 
+              [(ngModel)]="email"
+              placeholder="Twój email" 
+              class="newsletter-input"
+            />
+            <button (click)="subscribe()" class="newsletter-btn">
+              Zapisz się
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-section">
+        <h4 class="footer-title">Szybkie linki</h4>
+        <ul class="footer-links">
+          <li><a routerLink="/products" class="footer-link">Produkty</a></li>
+          <li><a href="#korzysci" class="footer-link">Korzyści</a></li>
+          <li><a routerLink="/about" class="footer-link">O nas</a></li>
+          <li><a routerLink="/dostawa" class="footer-link">Dostawa</a></li>
+          <li><a routerLink="/regulamin" class="footer-link">Regulamin</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="footer-section">
+        <h4 class="footer-title">Kontakt</h4>
+        <ul class="footer-contact">
+          <li class="contact-item">
+            <span class="contact-icon">📞</span>
+            <span>+48 123 456 789</span>
+          </li>
+          <li class="contact-item">
+            <span class="contact-icon">✉️</span>
+            <span>kontakt@speedbee.pl</span>
+          </li>
+          <li class="contact-item">
+            <span class="contact-icon">📍</span>
+            <div>
+              <span>ul. Miodowa 15<br/>12-345 Podlasie</span>
+            </div>
+          </li>
+        </ul>
+        <div class="social-links">
+          <a 
+            href="https://facebook.com" 
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-icon"
+            aria-label="Facebook"
+            title="Facebook"
+          >
+            f
+          </a>
+          <a 
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-icon"
+            aria-label="Instagram"
+            title="Instagram"
+          >
+            📷
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <p class="footer-copyright">
+        © {{ currentYear }} SpeedBee. Wszystkie prawa zastrzeżone.
+      </p>
+      <div class="footer-legal">
+        <a routerLink="/polityka-prywatnosci" class="legal-link">Polityka prywatności</a>
+        <a routerLink="/regulamin" class="legal-link">Regulamin</a>
+      </div>
+    </div>
+  </div>
+</footer>
